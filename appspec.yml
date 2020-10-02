@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:eu-west-1:971072990695:task-definition/django-app:12"
+        TaskDefinition: "arn:aws:ecs:eu-west-1:971072990695:task-definition/django-app:14"
         LoadBalancerInfo:
           ContainerName: "django-app"
           ContainerPort: 8000
