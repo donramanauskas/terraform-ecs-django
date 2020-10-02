@@ -1,0 +1,5 @@
+Django==3.1
+gunicorn==20.0.4
+boto3
+click
+psycopg2-binary==2.8.5
