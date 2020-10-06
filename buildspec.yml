@@ -20,3 +20,7 @@ phases:
   post_build:
     commands:
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/django-app:latest
+artifacts:
+  files:
+    - appspec.yml
+    - taskdef.json
