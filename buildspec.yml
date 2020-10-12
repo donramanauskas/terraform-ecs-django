@@ -20,7 +20,7 @@ phases:
   post_build:
     commands:
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/django-app:latest
-      - printf '{"ImageURI":"image_URI"}' > imageDetail.json > ../imageDetail.json
+      - echo {"ImageURI":"$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/django-app:latest"} > ../imageDetail.json
 artifacts:
   files:
     - appspec.yml
