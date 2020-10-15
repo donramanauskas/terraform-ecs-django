@@ -1,6 +1,5 @@
 {
   "family": "1",
-  "executionRoleArn": "arn:aws:iam::account_ID:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "name": "sample-website",
