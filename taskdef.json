@@ -5,6 +5,8 @@
       "name": "sample-website",
       "image": "nginx",
       "essential": true,
+      "cpu": 10,
+      "memory": 512,
       "portMappings": [
         {
           "hostPort": 80,
