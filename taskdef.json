@@ -1,5 +1,5 @@
 {
-  "family": "1",
+  "family": "django-app",
   "containerDefinitions": [
     {
       "name": "django-app",
