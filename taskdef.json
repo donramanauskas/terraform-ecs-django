@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "django-app",
-      "image": "971072990695.dkr.ecr.eu-west-1.amazonaws.com/django-app:latest",
+      "image": "<IMAGE1_NAME>",
       "essential": true,
       "cpu": 10,
       "memory": 512,
