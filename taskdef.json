@@ -13,7 +13,38 @@
           "protocol": "tcp",
           "containerPort": 8000
         }
-      ]
+      ],
+      "environment": [
+        {
+          "name": "RDS_DB_NAME",
+          "value": "mydb"
+        },
+        {
+          "name": "RDS_HOSTNAME",
+          "value": "production.cceentbfy6tm.eu-west-1.rds.amazonaws.com"
+        },
+        {
+          "name": "RDS_PASSWORD",
+          "value": "BBDslaptazodis1987!"
+        },
+        {
+          "name": "RDS_PORT",
+          "value": "5432"
+        },
+        {
+          "name": "RDS_USERNAME",
+          "value": "bbduser"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "secretOptions": null,
+        "options": {
+          "awslogs-group": "/ecs/django-app",
+          "awslogs-region": "eu-west-1",
+          "awslogs-stream-prefix": "django-app-log-stream"
+        }
+      }
     }
   ]
 }
