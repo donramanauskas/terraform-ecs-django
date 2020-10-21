@@ -23,22 +23,18 @@
         ":8000",
         "hello_django.wsgi:application"
       ],
-      "environment": [
+      "secrets": [
         {
-          "name": "RDS_DB_NAME",
-          "value": "mydb"
+          "name": "RDS_DB_NAME"
         },
         {
-          "name": "RDS_HOSTNAME",
-          "value": "production.cceentbfy6tm.eu-west-1.rds.amazonaws.com"
+          "name": "RDS_HOSTNAME"
         },
         {
-          "name": "RDS_PASSWORD",
-          "value": "BBDslaptazodis1987!"
+          "name": "RDS_PASSWORD"
         },
         {
-          "name": "RDS_PORT",
-          "value": "5432"
+          "name": "RDS_PORT"
         },
         {
           "name": "RDS_USERNAME",
