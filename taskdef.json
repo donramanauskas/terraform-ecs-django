@@ -1,4 +1,5 @@
 {
+  "ExecutionRoleArn" : "arn:aws:iam::971072990695:role/ecsTaskExecutionRole",
   "family": "django-app",
   "containerDefinitions": [
     {
