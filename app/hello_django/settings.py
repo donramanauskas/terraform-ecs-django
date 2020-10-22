@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
+from .get_secrets import get_secret
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -76,15 +77,17 @@ WSGI_APPLICATION = 'hello_django.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-if 'RDS_DB_NAME' in os.environ:
+secrets = get_secret()
+
+if len(secrets) > 0:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': os.environ['RDS_DB_NAME'],
-            'USER': os.environ['RDS_USERNAME'],
-            'PASSWORD': os.environ['RDS_PASSWORD'],
-            'HOST': os.environ['RDS_HOSTNAME'],
-            'PORT': os.environ['RDS_PORT'],
+            'NAME': secrets['RDS_DB_NAME'],
+            'USER': secrets['RDS_USERNAME'],
+            'PASSWORD': secrets['RDS_PASSWORD'],
+            'HOST': secrets['RDS_HOSTNAME'],
+            'PORT': secrets['RDS_PORT'],
         }
     }
 else:
