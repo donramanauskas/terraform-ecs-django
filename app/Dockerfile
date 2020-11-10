@@ -1,5 +1,5 @@
 # pull official base image
-FROM python:3.8.0-slim-buster
+FROM 971072990695.dkr.ecr.eu-west-1.amazonaws.com/python:latest
 
 # set work directory
 WORKDIR /usr/src/app
